@@ -2,15 +2,19 @@
    COERICIUSFLIX THEME LOADER
 ===================================================== */
 
-const scripts = [
-    "https://raw.githubusercontent.com/L4nceC/coericiusflix/main/js/badges.js",
-    "https://raw.githubusercontent.com/L4nceC/coericiusflix/main/js/mobileTap.js",
-    "https://raw.githubusercontent.com/L4nceC/coericiusflix/main/js/device.js"
-];
+(function () {
 
-scripts.forEach(src => {
-    const script = document.createElement("script");
-    script.src = src;
-    script.defer = true;
-    document.head.appendChild(script);
-});
+    const scripts = [
+        "https://l4ncec.github.io/coericiusflix/js/badges.js",
+        "https://l4ncec.github.io/coericiusflix/js/mobileTap.js",
+        "https://l4ncec.github.io/coericiusflix/js/device.js"
+    ];
+
+    scripts.forEach(src => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.defer = true;
+        document.head.appendChild(script);
+    });
+
+})();
