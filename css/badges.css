@@ -1,0 +1,23 @@
+.card[data-badge] {
+    position: relative;
+}
+
+.card[data-type="Movie"][data-badge]::after,
+.card[data-type="Series"][data-badge]::after,
+.card[data-type="Episode"][data-badge]::after {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    background: #e50914;
+    z-index: 50;
+    content: attr(data-badge-label);
+}
+
+.card[data-type="Person"][data-badge]::after {
+    display: none !important;
+}

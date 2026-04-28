@@ -1,0 +1,28 @@
+body.mode-tv {
+    font-size: 1.2em !important;
+}
+
+body.mode-tv .itemsContainer:hover .card {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+body.mode-tv .card:hover {
+    transform: none !important;
+}
+
+body.mode-tv .cardText,
+body.mode-tv .innerCardFooter {
+    display: block !important;
+}
+
+@media (min-width: 1200px) {
+    body.mode-tv .card {
+        width: 260px !important;
+    }
+
+    body.mode-tv .itemsContainer {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+}

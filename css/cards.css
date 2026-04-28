@@ -1,0 +1,33 @@
+.card {
+    position: relative;
+    isolation: isolate;
+    transition:
+        transform 0.22s ease,
+        filter 0.22s ease;
+}
+
+.cardScalable {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    border: 2px solid transparent;
+    transition:
+        border-color 0.22s ease,
+        transform 0.22s ease;
+}
+
+body.mode-desktop .card:hover {
+    transform: scale(1.04);
+    z-index: 20;
+}
+
+body.mode-desktop .card:hover .cardScalable {
+    border-color: rgba(255,255,255,0.95) !important;
+}
+
+.cardImageContainer {
+    transition: transform 0.25s ease;
+}
+
+body.mode-desktop .card:hover .cardImageContainer {
+    transform: scale(1.03);
+}

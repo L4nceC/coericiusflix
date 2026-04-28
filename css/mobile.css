@@ -1,0 +1,46 @@
+body.mode-mobile .card {
+    width: 150px !important;
+}
+
+body.mode-mobile .cardText,
+body.mode-mobile .innerCardFooter {
+    display: none !important;
+}
+
+/* Mobile Play Button */
+body.mode-mobile .cardOverlayContainer {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+body.mode-mobile .cardOverlayFab-primary {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto !important;
+    width: 46px !important;
+    height: 46px !important;
+    background: #e50914 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.45),
+        0 0 12px rgba(229,9,20,0.35);
+}
+
+body.mode-mobile .cardOverlayFab-primary .material-icons {
+    color: #fff !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    margin-left: 2px !important;
+}
+
+body.mode-mobile .card[data-type="Movie"][data-badge]::after,
+body.mode-mobile .card[data-type="Series"][data-badge]::after,
+body.mode-mobile .card[data-type="Episode"][data-badge]::after {
+    display: block !important;
+}

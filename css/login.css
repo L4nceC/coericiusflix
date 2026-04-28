@@ -1,0 +1,155 @@
+#loginPage {
+    min-height: 100vh;
+    width: 100%;
+    background:
+        linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.55)),
+        url("../img/splashscreen.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Hide Jellyfin clutter */
+#loginPage h1,
+#loginPage .pageTitleWithDefaultLogo,
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+    display: none !important;
+}
+
+body:has(#loginPage:not(.hide)) .skinHeader {
+    display: none !important;
+}
+
+/* =====================================================
+   PROFILE SELECT SCREEN
+===================================================== */
+
+/* Remove default container styling */
+#loginPage:not(.manualLogin) .padded-left.padded-right.padded-bottom-page {
+    background: none !important;
+    box-shadow: none !important;
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Center profiles + buttons */
+#loginPage:not(.manualLogin) .readOnlyContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-top: 10vh;
+}
+
+/* Profile cards */
+#loginPage:not(.manualLogin) .card {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+#loginPage:not(.manualLogin) .card:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+    z-index: 5;
+}
+
+#loginPage:not(.manualLogin) .cardScalable {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+}
+
+#loginPage:not(.manualLogin) .cardText {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #ccc !important;
+}
+
+/* Profile screen buttons */
+#loginPage:not(.manualLogin) .raised {
+    width: 220px;
+    margin: 8px;
+}
+
+/* =====================================================
+   MANUAL LOGIN SCREEN
+===================================================== */
+
+#loginPage.manualLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Login box */
+#loginPage.manualLogin .padded-left.padded-right.padded-bottom-page {
+    width: 100%;
+    max-width: 420px !important;
+
+    padding: 2.25em !important;
+    margin: 0 !important;
+
+    background: rgba(10,10,15,0.82) !important;
+    backdrop-filter: blur(14px);
+
+    border-radius: 18px;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.85);
+}
+
+/* Center form properly */
+#loginPage.manualLogin form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Inputs */
+#loginPage.manualLogin .inputContainer,
+#loginPage.manualLogin .emby-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Checkbox spacing */
+#loginPage.manualLogin .checkboxContainer {
+    margin: 6px 0 8px;
+}
+
+/* Buttons */
+#loginPage.manualLogin .raised {
+    width: 100% !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: 1px solid rgba(255,255,255,0.20) !important;
+    border-radius: 8px !important;
+
+    color: white !important;
+
+    transition: all 0.2s ease;
+}
+
+#loginPage.manualLogin .raised:hover {
+    border-color: white !important;
+    background: rgba(255,255,255,0.06) !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    #loginPage:not(.manualLogin) .readOnlyContent {
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 6vh;
+    }
+
+    #loginPage.manualLogin .padded-left.padded-right.padded-bottom-page {
+        max-width: 90% !important;
+    }
+}

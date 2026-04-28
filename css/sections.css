@@ -1,0 +1,28 @@
+.emby-scroller {
+    overflow-x: auto !important;
+    scrollbar-width: none;
+}
+
+.emby-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.itemsContainer {
+    gap: 14px;
+}
+
+.sectionTitle {
+    font-weight: 600 !important;
+    margin-bottom: 14px !important;
+    position: relative;
+}
+
+.sectionTitle::before {
+    content: "";
+    width: 4px;
+    height: 16px;
+    background: #e50914;
+    position: absolute;
+    left: -12px;
+    top: 4px;
+}
