@@ -44,44 +44,54 @@ body.mode-desktop .verticalSection {
     grid-column: 1 / -1 !important;
 }
 
-/* NETFLIX HERO FOUNDATION */
+/* FULL NETFLIX HERO LAYOUT */
 .mode-desktop #itemBackdrop {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 75vh !important;
+
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    background-color: transparent !important;
-    opacity: 1 !important;
-    filter: none !important;
-    visibility: visible !important;
-    display: block !important;
-    z-index: 0 !important;
+
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+
+    z-index: 0;
 }
 
-/* NETFLIX HERO BACKDROP IMAGE FIX */
-.mode-desktop #itemBackdrop,
-.mode-desktop #itemBackdrop::before,
-.mode-desktop #itemBackdrop::after {
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-}
-
+/* Push content over hero */
 .mode-desktop .detailPageWrapperContainer {
-    margin-top: -22vh !important;
     position: relative;
     z-index: 2;
+    margin-top: 38vh !important;
     background: transparent !important;
 }
 
+/* Hide poster */
+.mode-desktop .detailImageContainer {
+    display: none !important;
+}
+
+/* Constrain content */
 .mode-desktop .detailPagePrimaryContainer {
-    width: min(1400px, 90%);
+    width: min(1400px, 88%);
     margin: 0 auto;
     align-items: flex-start !important;
 }
 
+/* Logo positioning */
 .mode-desktop .detailLogo {
     width: 420px !important;
-    max-width: 40vw !important;
+    max-width: 35vw !important;
     margin-bottom: 2rem !important;
 }
 
+/* Dark overlay behind metadata row */
+.mode-desktop .detailRibbon {
+    background: rgba(20,20,20,0.82) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
