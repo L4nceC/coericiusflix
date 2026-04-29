@@ -43,3 +43,35 @@ body.mode-desktop #listChildrenCollapsible,
 body.mode-desktop .verticalSection {
     grid-column: 1 / -1 !important;
 }
+
+/* DESKTOP FOUNDATION */
+.layout-desktop .detailImageContainer {
+    display: none !important;
+}
+
+.layout-desktop .itemBackdrop {
+    height: 72vh !important;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+}
+
+.layout-desktop .detailPageWrapperContainer {
+    margin-top: -22vh;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+.layout-desktop .detailPagePrimaryContainer {
+    width: min(1400px, 90%);
+    margin: 0 auto;
+    padding-top: 0;
+    align-items: flex-start;
+}
+
+.layout-desktop .detailLogo {
+    width: 420px;
+    max-width: 40vw;
+    margin-bottom: 2rem;
+}
