@@ -56,9 +56,13 @@ body.mode-desktop .verticalSection {
     display: none !important;
 }
 
-.mode-desktop .itemBackdrop {
+/* NETFLIX HERO BACKDROP IMAGE FIX */
+.mode-desktop #itemBackdrop {
     height: 72vh !important;
-    position: relative;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
     mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
 }
