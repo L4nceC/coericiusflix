@@ -1,119 +1,45 @@
 /* =========================================
-   COERICIUSFLIX DETAILS PAGE FOUNDATION
+   CoericiusFLIX DETAIL PAGE GRID FOUNDATION
 ========================================= */
 
-body.mode-desktop #itemDetailPage {
-
-    max-width: 100% !important;
-    padding: 0 !important;
-}
-
-/* MAIN HERO WRAPPER */
-body.mode-desktop .detailPagePrimaryContainer {
-
+body.mode-desktop #itemDetailPage .detailSection {
     display: grid !important;
-    grid-template-columns: 420px 1fr !important;
-    gap: 48px !important;
-
+    grid-template-columns: 320px 1fr 1fr 1fr !important;
+    column-gap: 40px !important;
+    row-gap: 20px !important;
+    max-width: none !important;
+    width: 100% !important;
     align-items: start !important;
-
-    width: 100% !important;
-    max-width: 1600px !important;
-
-    margin: 0 auto !important;
-    padding: 40px 60px !important;
 }
 
-/* POSTER */
+/* Poster Column */
 body.mode-desktop .detailImageContainer {
-
-    width: 420px !important;
-    min-width: 420px !important;
-
-    margin: 0 !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 320px !important;
 }
 
-/* RIGHT CONTENT COLUMN */
-body.mode-desktop .detailPagePrimaryContent {
-
-    width: 100% !important;
-    min-width: 0 !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* METADATA WRAPPER */
-body.mode-desktop .infoWrapper {
-
-    width: 100% !important;
-    max-width: none !important;
-
-    margin: 0 0 24px 0 !important;
-}
-
-/* OVERVIEW CONTENT */
+/* Main Metadata / Hero Area */
 body.mode-desktop .detailSectionContent {
-
-    width: 100% !important;
-    max-width: none !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
+    grid-column: 2 / 5 !important;
+    grid-row: 1 !important;
+    display: block !important;
+    min-height: unset !important;
 }
 
-/* EPISODES / CAST / MORE LIKE THIS */
-body.mode-desktop #childrenCollapsible,
-body.mode-desktop #castCollapsible,
+/* Extra Details / Tags / Genres */
+body.mode-desktop .itemDetailsGroup {
+    grid-column: 1 / 3 !important;
+}
+
+/* Track Selections */
+body.mode-desktop .trackSelections {
+    grid-column: 3 / 5 !important;
+}
+
+/* Episode / Season Rows Full Width */
+body.mode-desktop .nextUpSection,
+body.mode-desktop #listChildrenCollapsible,
 body.mode-desktop .verticalSection {
-
-    margin-top: 40px !important;
-}
-/* =========================================
-   DETAILS PAGE FIX PACK v2
-   Expands Metadata / Buttons / Overview
-========================================= */
-
-body.mode-desktop .infoWrapper,
-body.mode-desktop .nameContainer,
-body.mode-desktop .itemMiscInfo,
-body.mode-desktop .mainDetailButtons,
-body.mode-desktop .detailSectionContent {
-
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-}
-
-/* Stack metadata naturally */
-body.mode-desktop .infoWrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 14px !important;
-}
-
-/* Make buttons stay inline */
-body.mode-desktop .mainDetailButtons {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 14px !important;
-}
-
-/* Ensure overview sits BELOW buttons */
-body.mode-desktop .detailSectionContent {
-    margin-top: 24px !important;
-}
-
-/* Prevent title truncation */
-body.mode-desktop .nameContainer {
-    overflow: visible !important;
-}
-
-body.mode-desktop .itemName {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
+    grid-column: 1 / -1 !important;
 }
