@@ -44,34 +44,33 @@ body.mode-desktop .verticalSection {
     grid-column: 1 / -1 !important;
 }
 
-/* DESKTOP FOUNDATION */
-.layout-desktop .detailImageContainer {
+/* NETFLIX HERO FOUNDATION */
+.mode-desktop .detailImageContainer {
     display: none !important;
 }
 
-.layout-desktop .itemBackdrop {
+.mode-desktop .itemBackdrop {
     height: 72vh !important;
     position: relative;
     mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
 }
 
-.layout-desktop .detailPageWrapperContainer {
-    margin-top: -22vh;
+.mode-desktop .detailPageWrapperContainer {
+    margin-top: -22vh !important;
     position: relative;
     z-index: 2;
-    background: transparent;
+    background: transparent !important;
 }
 
-.layout-desktop .detailPagePrimaryContainer {
+.mode-desktop .detailPagePrimaryContainer {
     width: min(1400px, 90%);
     margin: 0 auto;
-    padding-top: 0;
-    align-items: flex-start;
+    align-items: flex-start !important;
 }
 
-.layout-desktop .detailLogo {
-    width: 420px;
-    max-width: 40vw;
-    margin-bottom: 2rem;
+.mode-desktop .detailLogo {
+    width: 420px !important;
+    max-width: 40vw !important;
+    margin-bottom: 2rem !important;
 }
