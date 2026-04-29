@@ -45,6 +45,13 @@ body.mode-desktop .verticalSection {
 }
 
 /* NETFLIX HERO FOUNDATION */
+.mode-desktop .backdropContainer,
+.mode-desktop .backgroundContainer,
+.mode-desktop .itemBackdrop,
+.mode-desktop .detailBackdrop {
+    outline: 3px solid red !important;
+    min-height: 70vh !important;
+}
 .mode-desktop .detailImageContainer {
     display: none !important;
 }
@@ -74,3 +81,4 @@ body.mode-desktop .verticalSection {
     max-width: 40vw !important;
     margin-bottom: 2rem !important;
 }
+
