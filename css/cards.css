@@ -15,6 +15,10 @@
         transform 0.22s ease;
 }
 
+.cardText.cardTextCentered.cardText-secondary {
+    display: none !important;
+}
+
 body.mode-desktop .card:hover {
     transform: scale(1.04);
     z-index: 20;
@@ -32,6 +36,4 @@ body.mode-desktop .card:hover .cardImageContainer {
     transform: scale(1.03);
 }
 
-.cardText.cardTextCentered.cardText-secondary {
-    display: none !important;
-}
+
