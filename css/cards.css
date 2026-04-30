@@ -31,3 +31,7 @@ body.mode-desktop .card:hover .cardScalable {
 body.mode-desktop .card:hover .cardImageContainer {
     transform: scale(1.03);
 }
+
+#itemDetailPage .cardText.cardTextCentered.cardText-secondary {
+    display: none !important;
+}
